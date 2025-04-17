@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: argocd-appsets-test
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: k3s-tester2
+      url: https://10.10.5.15
+      - cluster: k3s-master1
+      url: https://10.10.10.5
+  template:
+    metadata:
+      name: '{{cluster}}- argocd-appsets'
+    spec:
+      source:
+        repoURL: https://github.com/deegbo/argocd-appSet.git
+        targetRevision: HEAD
+        path: argocd-appsets/{{cluster}}
+      destination:
+        server: '{{url}}'
+        namespace: nginx
+      syncPolicy:
+        automated:
+          selfHeal: true
+          prune: true
