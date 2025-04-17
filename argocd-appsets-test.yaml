@@ -8,7 +8,7 @@ spec:
       elements:
       - cluster: k3s-cluster2
         url: https://10.10.5.15:6443
-      - cluster: k3s-tester1-argocd-cluster
+      - cluster: k3s-cluster1
         url: https://10.10.10.5:6443
   template:
     metadata:
