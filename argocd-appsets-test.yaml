@@ -14,6 +14,7 @@ spec:
     metadata:
       name: '{{cluster}}- argocd-appsets'
     spec:
+      project: default
       source:
         repoURL: https://github.com/deegbo/argocd-appSet.git
         targetRevision: HEAD
@@ -25,4 +26,3 @@ spec:
         automated:
           selfHeal: true
           prune: true
-          
