@@ -12,7 +12,7 @@ spec:
         url: https://10.10.10.5
   template:
     metadata:
-      name: '{{cluster}}- argocd-appsets'
+      name: '{{cluster}}-argocd-appsets'
     spec:
       project: default
       source:
