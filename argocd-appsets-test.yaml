@@ -6,9 +6,9 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: k3s-tester2
+      - cluster: k3s-cluster2
         url: https://10.10.5.15
-      - cluster: k3s-master1
+      - cluster: k3s-tester1-argocd-cluster
         url: https://10.10.10.5
   template:
     metadata:
