@@ -7,9 +7,9 @@ spec:
   - list:
       elements:
       - cluster: k3s-tester2
-      url: https://10.10.5.15
+        url: https://10.10.5.15
       - cluster: k3s-master1
-      url: https://10.10.10.5
+        url: https://10.10.10.5
   template:
     metadata:
       name: '{{cluster}}- argocd-appsets'
