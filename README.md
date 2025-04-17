@@ -1,2 +1,2 @@
 # argocd-appSet
-ArgoCD ApplicationSet Test
+ArgoCD ApplicationSet Tester
