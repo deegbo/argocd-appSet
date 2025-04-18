@@ -18,7 +18,7 @@ spec:
       source:
         repoURL: https://github.com/deegbo/argocd-appSet.git
         targetRevision: HEAD
-        path: argocd-appsets/{{cluster}}
+        path: 'argocd-appsets/{{cluster}}'
       destination:
         server: '{{url}}'
         namespace: nginx
