@@ -7,9 +7,9 @@ spec:
   - list:
       elements:
       - cluster: k3s-cluster2
-        url: https://10.10.5.15:6443
+        url: https://k3s-tester2.nickker.io:6443
       - cluster: k3s-cluster1
-        url: https://10.10.10.5:6443
+        url: https://k3s-master1.adamker.io:6443
   template:
     metadata:
       name: '{{cluster}}-argocd-appsets'
