@@ -7,7 +7,7 @@ spec:
   - list:
       elements:
       - cluster: k3s-cluster1
-        url: https://192.168.1.49:6443
+        url: https://192.168.1.47:6443
       - cluster: k3s-cluster2
         url: https://192.168.1.51:6443
       - cluster: k3s-cluster3
