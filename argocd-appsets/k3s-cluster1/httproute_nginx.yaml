@@ -1,0 +1,20 @@
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: HTTPRoute
+metadata:
+  name: nginx-route
+  namespace: nginx
+spec:
+  hostnames: 
+  - nginx.one.io
+  parentRefs:
+    - name: cilium-gateway
+      namespace: default
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+      - kind: Service
+        name: nginx
+        port: 80
