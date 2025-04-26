@@ -15,5 +15,5 @@ spec:
             value: /
       backendRefs:
       - kind: Service
-        name: web-app-service
+        name: nginx
         port: 80
